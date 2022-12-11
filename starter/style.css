@@ -15,8 +15,8 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  /* background-color: transparent;
+  color: black; */
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -72,4 +72,3 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
-
