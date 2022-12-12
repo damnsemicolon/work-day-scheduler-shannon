@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-//      moment.js code to show date & time
+//      Set up moment.js code to show date & time
 $("#currentDay").text("Date: " + moment().format('dddd, Do MMMM yyyy'));
 $("#currentTime").text("Time: " + moment().format('hh:mm:ss A'));
 //      Set up current time for referencing
@@ -14,7 +14,8 @@ $("#clearFieldsBtn").click(function (event) {
     localStorage.clear();
   });
 
+
+
+
+
 });
-
-
-
