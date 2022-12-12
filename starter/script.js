@@ -31,6 +31,7 @@ $("#hour-17 .eventArea").val(localStorage.getItem("hour-17"));
 $("#hour-18 .eventArea").val(localStorage.getItem("hour-18"));
 $("#hour-19 .eventArea").val(localStorage.getItem("hour-19"));
 
+
 //      Clear local storage and show default in scheduler
 $("#clearFieldsBtn").click(function (event) {
     event.preventDefault;
