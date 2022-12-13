@@ -3,7 +3,6 @@ $(document).ready(function() {
 
 //      Set up moment.js code to show date & time
 $("#currentDay").text("Date: " + moment().format('dddd, Do MMMM yyyy'));
-// $("#currentTime").text("Time: " + moment().format('hh:mm A'));
 //      Set up current time for referencing
 var currentTime = moment().format("HH");
 
@@ -38,22 +37,22 @@ $("#clearFieldsBtn").click(function (event) {
     console.log("Cleared!")
   });
 
-//      Set up function to compare current time against scheduler hours
-  function whatTimeIsIt() {
+//      Set up function to compare current hour against scheduler hours
+function whatTimeIsIt() {
     //get current time's hour with "moment().hour()"
-    var currentHour = moment().hour();
+    var currentHour = 11;
     
     // loop over each time-blocks
     $(".time-block").each(function () {
-        var blockHour = parseInt($(this).attr("id").split("hour-")[1]);
+        var schedulerHours = parseInt($(this).attr("id").split("hour-")[1]);
 
         // Grey block (past)
-        if (blockHour < currentHour) {
+        if (schedulerHours < currentHour) {
             $(this).addClass("past");
             $(this).removeClass("present");
             $(this).removeClass("future");
         } // Red block (present)
-        else if (blockHour == currentHour) {
+        else if (schedulerHours == currentHour) {
             $(this).removeClass("past");
             $(this).addClass("present");
             $(this).removeClass("future");

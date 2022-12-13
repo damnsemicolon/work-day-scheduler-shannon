@@ -1,180 +1,163 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta nAMe="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <!-- <link
-      href="https://fonts.googleapis.com/css?fAMily=Open+Sans&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron bg-info text-white">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta nAMe="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Work Day Scheduler</title>
+</head>
 
-      <p id="currentDay" class="lead"></p>
-      <p id="currentTime" class="lead"></p>
-      <button id="clearFieldsBtn" type="button" class="btn btn-secondary">
-        Clear Fields
+<body>
+  <header class="jumbotron bg-info text-white">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+
+    <p id="currentDay" class="lead"></p>
+    <p id="currentTime" class="lead"></p>
+    <button id="clearFieldsBtn" type="button" class="btn btn-secondary">
+      Clear Fields
+    </button>
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">"Blessed are the forgetful, for they get the better even of their blunders."</p>
+      <footer class="blockquote-footer">Friedrich Nietzsche</footer>
+    </blockquote>
+  </header>
+
+  <div class="container">
+
+    <div id="hour-08" class="time-block row">
+      <div class="hourArea col-1 border">
+        8AM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
       </button>
-      <blockquote class="blockquote text-center">
-        <p class="mb-0">"Blessed are the forgetful, for they get the better even of their blunders."</p>
-        <footer class="blockquote-footer">Friedrich Nietzsche</footer>
-      </blockquote>
-    </header>
-
-    <div class="container">
-
-      <div id="hour-08" class="time-block row">
-        <div class="hourArea col-1 border">
-          8AM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-09" class="time-block row">
-        <div class="hourArea col-1 border">
-          9AM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-      
-      <div id="hour-10" class="time-block row">
-        <div class="hourArea col-1 border">
-          10AM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-11" class="time-block row">
-        <div class="hourArea col-1 border">
-          11AM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-12" class="time-block row">
-        <div class="hourArea col-1 border">
-          12PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-13" class="time-block row">
-        <div class="hourArea col-1 border">
-          1PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-      
-      <div id="hour-14" class="time-block row">
-        <div class="hourArea col-1 border">
-          2PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-15" class="time-block row">
-        <div class="hourArea col-1 border">
-          3PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-16" class="time-block row">
-        <div class="hourArea col-1 border">
-          4PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-17" class="time-block row">
-        <div class="hourArea col-1 border">
-          5PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-18" class="time-block row">
-        <div class="hourArea col-1 border">
-          6PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
-      <div id="hour-19" class="time-block row">
-        <div class="hourArea col-1 border">
-          7PM
-        </div>
-        <textarea class="eventArea col-10 border" placeholder="Overtime"></textarea>
-        <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
-          Save
-        </button>
-      </div>
-
     </div>
-    
+
+    <div id="hour-09" class="time-block row">
+      <div class="hourArea col-1 border">
+        9AM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-10" class="time-block row">
+      <div class="hourArea col-1 border">
+        10AM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-11" class="time-block row">
+      <div class="hourArea col-1 border">
+        11AM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-12" class="time-block row">
+      <div class="hourArea col-1 border">
+        12PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-13" class="time-block row">
+      <div class="hourArea col-1 border">
+        1PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-14" class="time-block row">
+      <div class="hourArea col-1 border">
+        2PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-15" class="time-block row">
+      <div class="hourArea col-1 border">
+        3PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-16" class="time-block row">
+      <div class="hourArea col-1 border">
+        4PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-17" class="time-block row">
+      <div class="hourArea col-1 border">
+        5PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-18" class="time-block row">
+      <div class="hourArea col-1 border">
+        6PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+
+    <div id="hour-19" class="time-block row">
+      <div class="hourArea col-1 border">
+        7PM
+      </div>
+      <textarea class="eventArea col-10 border" placeholder="Overtime"></textarea>
+      <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
+        Save
+      </button>
+    </div>
+  </div>
+
   <footer class="bg-info text-center p-1">
-      <h5 class="text-white">Designed with 🤯 &copy; Shannon Yap 2022</h5>
+    <h5 class="text-white">Designed with 🤯 &copy; Shannon Yap 2022</h5>
   </footer>
-    
-    
-    <!-- ==================== -->
-    <!-- ===  End Script  === -->
-    <!-- ==================== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
