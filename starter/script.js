@@ -40,7 +40,7 @@ $("#clearFieldsBtn").click(function (event) {
 //      Set up function to compare current hour against scheduler hours
 function whatTimeIsIt() {
     //get current time's hour with "moment().hour()"
-    var currentHour = 13;
+    var currentHour = moment().hour();
     
     // loop over each time-blocks
     $(".time-block").each(function () {
@@ -48,19 +48,19 @@ function whatTimeIsIt() {
 
         // Grey block (past)
         if (schedulerHours < currentHour) {
-            $(this).addClass("past");
+            $(this).addClass("past");       // GREY
             $(this).removeClass("present");
             $(this).removeClass("future");
         } // Red block (present)
         else if (schedulerHours == currentHour) {
             $(this).removeClass("past");
-            $(this).addClass("present");
+            $(this).addClass("present");    // RED
             $(this).removeClass("future");
         }
         else { // Green block (future)
-            $(this).removeClass("present");
             $(this).removeClass("past");
-            $(this).addClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("future")      // GREEN
         }
     })
 }
