@@ -42,7 +42,6 @@ $("#clearFieldsBtn").click(function (event) {
   function whatTimeIsIt() {
     //get current time's hour with "moment().hour()"
     var currentHour = moment().hour();
-    console.log(currentHour)
     
     // loop over each time-blocks
     $(".time-block").each(function () {
