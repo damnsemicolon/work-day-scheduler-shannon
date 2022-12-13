@@ -3,11 +3,9 @@ $(document).ready(function() {
 
 //      Set up moment.js code to show date & time
 $("#currentDay").text("Date: " + moment().format('dddd, Do MMMM yyyy'));
-$("#currentTime").text("Time: " + moment().format('hh:mm:ss A'));
+// $("#currentTime").text("Time: " + moment().format('hh:mm A'));
 //      Set up current time for referencing
 var currentTime = moment().format("HH");
-
-
 
 //      Use button to save content in adjecent textarea
 $(".saveBtn").click(function (event) {
@@ -39,4 +37,34 @@ $("#clearFieldsBtn").click(function (event) {
     localStorage.clear();
     console.log("Cleared!")
   });
+
+//      Set up function to compare current time against scheduler hours
+  function whatTimeIsIt() {
+    //get current time's hour with "moment().hour()"
+    var currentHour = moment().hour();
+    console.log(currentHour)
+    
+    // loop over each time-blocks
+    $(".time-block").each(function () {
+        var blockHour = parseInt($(this).attr("id").split("hour-")[1]);
+
+        // Grey block (past)
+        if (blockHour < currentHour) {
+            $(this).addClass("past");
+            $(this).removeClass("present");
+            $(this).removeClass("future");
+        } // Red block (present)
+        else if (blockHour == currentHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+            $(this).removeClass("future");
+        }
+        else { // Green block (future)
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+        }
+    })
+}
+whatTimeIsIt();
 });

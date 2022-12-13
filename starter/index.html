@@ -26,33 +26,31 @@
     <header class="jumbotron bg-info text-white">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+
       <p id="currentDay" class="lead"></p>
       <p id="currentTime" class="lead"></p>
       <button id="clearFieldsBtn" type="button" class="btn btn-secondary">
         Clear Fields
       </button>
-      <!-- <i class="fa fa-user"></i>
-      <i class="fa fa-cloud"></i>
-      <i class="fa fa-poo"></i>
-      <i class="fa fa-bookmark"></i>
-      <i class="fas fa-thumbtack"></i>
-      <i class="fas fa-tasks"></i>
-      <i class="fas fa-skull"></i> -->
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">"Blessed are the forgetful, for they get the better even of their blunders."</p>
+        <footer class="blockquote-footer">Friedrich Nietzsche</footer>
+      </blockquote>
     </header>
 
     <div class="container">
 
-      <div id="hour-08" class="row">
+      <div id="hour-08" class="time-block row">
         <div class="hourArea col-1 border">
           8AM
         </div>
-        <textarea class="eventArea col-7 border" placeholder="Add schedule item here"></textarea>
+        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
         <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
           Save
         </button>
       </div>
 
-      <div id="hour-09" class="row">
+      <div id="hour-09" class="time-block row">
         <div class="hourArea col-1 border">
           9AM
         </div>
@@ -62,7 +60,7 @@
         </button>
       </div>
       
-      <div id="hour-10" class="row">
+      <div id="hour-10" class="time-block row">
         <div class="hourArea col-1 border">
           10AM
         </div>
@@ -72,7 +70,7 @@
         </button>
       </div>
 
-      <div id="hour-11" class="row">
+      <div id="hour-11" class="time-block row">
         <div class="hourArea col-1 border">
           11AM
         </div>
@@ -82,7 +80,7 @@
         </button>
       </div>
 
-      <div id="hour-12" class="row">
+      <div id="hour-12" class="time-block row">
         <div class="hourArea col-1 border">
           12PM
         </div>
@@ -92,7 +90,7 @@
         </button>
       </div>
 
-      <div id="hour-13" class="row">
+      <div id="hour-13" class="time-block row">
         <div class="hourArea col-1 border">
           1PM
         </div>
@@ -102,7 +100,7 @@
         </button>
       </div>
       
-      <div id="hour-14" class="row">
+      <div id="hour-14" class="time-block row">
         <div class="hourArea col-1 border">
           2PM
         </div>
@@ -112,7 +110,7 @@
         </button>
       </div>
 
-      <div id="hour-15" class="row">
+      <div id="hour-15" class="time-block row">
         <div class="hourArea col-1 border">
           3PM
         </div>
@@ -122,7 +120,7 @@
         </button>
       </div>
 
-      <div id="hour-16" class="row">
+      <div id="hour-16" class="time-block row">
         <div class="hourArea col-1 border">
           4PM
         </div>
@@ -132,7 +130,7 @@
         </button>
       </div>
 
-      <div id="hour-17" class="row">
+      <div id="hour-17" class="time-block row">
         <div class="hourArea col-1 border">
           5PM
         </div>
@@ -142,7 +140,7 @@
         </button>
       </div>
 
-      <div id="hour-18" class="row">
+      <div id="hour-18" class="time-block row">
         <div class="hourArea col-1 border">
           6PM
         </div>
@@ -152,11 +150,11 @@
         </button>
       </div>
 
-      <div id="hour-19" class="row">
+      <div id="hour-19" class="time-block row">
         <div class="hourArea col-1 border">
           7PM
         </div>
-        <textarea class="eventArea col-10 border" placeholder="Add schedule item here"></textarea>
+        <textarea class="eventArea col-10 border" placeholder="Overtime"></textarea>
         <button class="saveBtn col-1 border"><span class="fas fa-thumbtack"></span>
           Save
         </button>
